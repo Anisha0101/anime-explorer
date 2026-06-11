@@ -1,0 +1,52 @@
+<%- include("partials/header")%>
+<div class="card">
+    <h1><%=anime.title%></h1>
+    <img
+        src="<%=anime.images.jpg.image_url%>"
+        alt="<%=anime.title%>"
+        width="300"
+    >
+    <p>
+        <strong>Episodes:</strong>
+        <%=anime.episodes%>
+    </p>
+    <p>
+        <strong>Score:</strong>
+        <%=anime.score%>
+    </p>
+    <p>
+        <strong>Status:</strong>
+        <%= anime.status %>
+    </p>
+    <p>
+        <strong>Rating:</strong>
+        <%= anime.rating %>
+    </p>
+    <p>
+        <strong>Year:</strong>
+        <%= anime.year %>
+    </p>
+    <p>
+        <strong>Genres:</strong>
+        <%anime.genres.forEach((genre)=>{%>
+            <%=genre.name%>
+        <%})%>
+    </p>
+    <p>
+        <strong>Rank:</strong>
+            <%= anime.rank %>
+    </p>
+    <p>
+        <strong>Popularity:</strong>
+            <%= anime.popularity %>
+    </p>
+    <p>
+        <strong>Synopsis:</strong>
+        <%=anime.synopsis%>
+    </p>
+    <a href="/">
+        <button>Search Another Anime</button>
+    </a>
+</div>
+
+<%- include("partials/footer")%>
