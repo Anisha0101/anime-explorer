@@ -3,8 +3,8 @@ import axios from "axios";
 
 const app=express();
 app.set("view engine","ejs");
-const port=3000;
-
+// const port=3000;
+const port = process.env.PORT || 3000;
 app.use(express.static("public"));
 app.use(express.urlencoded({extended:true}));
 
